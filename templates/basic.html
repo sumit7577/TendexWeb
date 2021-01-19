@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>{%block title %} {% endblock %}Store</title>
+
+  </head>
+
+  <body>
+  {% block body %}{% endblock %}
+             <div id="righthand-side">
+
+                <!-- Flash error messages start -->
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    <!-- The messages, if any, are returned as a list. And not all redenring of the pages will have a message. So we put a condition to check whether the messages list is empty -->
+                    {% if messages %}
+                        <!-- We will set the class form our custom css file we had created earlier. And we want to see the first item in the list. -->
+                        <div class="alert alert-{{ messages[0][0] }} " role="alert">
+                            {{ messages[0][1] }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        <hr>
+                    {% endif %}
+                {% endwith %}
+  
+  
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static', filename='narrow-jumbotron.css') }}" rel="stylesheet">
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  
+      </body>
+       <footer class="footer">
+        <p>TendeX &copy; Store 2020</p>
+      </footer>
+</html>

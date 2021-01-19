@@ -1,0 +1,118 @@
+{% extends "basic.html" %}
+{% block body %}
+<div class="mt-0">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Admin Panel</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/dashboard2">Reseller Panel</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Total Keys {{keys.count(keys)}}</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Welcome {{user}}
+          </a>
+          <ul class="dropdown-menu me-4 w-25 p-3 mb-2" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/logout">Logout</a></li>
+        </li>
+     </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+</div>
+           
+<h1 class="my-3 ms-2">Available Keys</h1>
+
+<table class="table mt-2">
+<tr>
+<td>
+    <table class="table">
+        <thead>
+            <tr>
+                <td>Sno</td>
+            </tr>
+        </thead>
+        <tbody>
+        {% for key in keys %}
+            <tr>
+                <td>{{key.id}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</td>
+<td>
+    <table class="table">
+        <thead>
+            <tr>
+                <td>Key7</td>
+            </tr>
+        </thead>
+        <tbody>
+        {% for keyy in keys2 %}
+            <tr>
+                <td>{{keyy.key7}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+<td>
+    <table class="table">
+        <thead>
+            <tr>
+                <td>Key15</td>
+            </tr>
+        </thead>
+        <tbody>
+        {% for keyx in keys3 %}
+            <tr>
+                <td>{{keyx.key15}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+<td>
+    <table class="table">
+        <thead>
+            <tr>
+                <td>Key30</td>
+            </tr>
+        </thead>
+        <tbody>
+        {% for keyz in keys3 %}
+            <tr>
+                <td>{{keyz.key30}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+<td>
+    <table class="table">
+        <thead>
+            <tr>
+                <td>Key60</td>
+            </tr>
+        </thead>
+        <tbody>
+        {% for keym in keys4 %}
+            <tr>
+                <td>{{keym.key60}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</td>
+</tr>
+</table>
+    {% endblock %}

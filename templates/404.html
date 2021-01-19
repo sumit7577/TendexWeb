@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Page Not Found </title>
+ <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+        <!-- Custom css for prelogin pages -->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main_style.css') }}">
+    </head>
+</head>
+
+<body>
+ <!-- Main section start -->
+      <div class="main-section">
+
+            <div class="jumbotron">
+              <h1 class="display-4">TendeX</h1>
+              <p class="lead">A Place for your desired Cheats.... </p>
+            </div>
+ <!-- Demo image start -->
+            <div id="image-section">
+                <picture>
+                    <img class="card" src="{{ url_for('static', filename='img/demo.gif') }}" border="5px">
+                </picture>
+            </div>
+    <h2>Sorry, the page you are looking for does not exist!</h2>
+    <br/>
+    <h4>Go to <a href={{url_for("home")}}>Home</a> To start placing order for your cheats.</h3>
+    <br/>
+    <hr>
+
+    <p>Developed By <a href="https://t.me/Gadgethackerofficial">Sumit Kumar</a>.</p>
